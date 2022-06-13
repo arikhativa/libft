@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 18:21:37 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/13 18:26:21 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/13 20:41:34 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_atoi(const char *nptr)
 	ret = 0;
 	s = skip_space(s);
 	s = skip_get_sign(s, &sign);
-	while (ft_isalnum(*s))
+	while (ft_isdigit(*s))
 	{
 		ret = (ret * 10) + (*s - '0');
 		++s;
