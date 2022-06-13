@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/13 11:25:30 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/13 17:46:40 by yoav             ###   ########.fr       */
+/*   Created: 2022/06/13 17:37:56 by yoav              #+#    #+#             */
+/*   Updated: 2022/06/13 17:45:01 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	char	*ret;
+	int		i;
 
-// is_x
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-// to_x
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-
-// strings
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-
-#endif
+	ret = (char *)s;
+	i = (int)ft_strlen(s);
+	if (!c)
+		return (ret + i);
+	--i;
+	while (i >= 0 && ret[i] != c)
+		--i;
+	if (i == -1)
+		return ((char *)0);
+	return (ret + i);
+}
