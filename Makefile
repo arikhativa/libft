@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/14 11:12:39 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/14 11:16:19 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC = \
 	ft_memset.c \
 	ft_memcmp.c \
 	ft_memcpy.c \
+	ft_memchr.c \
 	ft_memmove.c \
 	ft_bzero.c
 
