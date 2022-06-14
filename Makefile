@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/14 18:43:32 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/14 18:48:04 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC = \
 	ft_memchr.c \
 	ft_memmove.c \
 	ft_split.c \
+	ft_strmapi.c \
 	ft_substr.c \
 	ft_bzero.c
 
