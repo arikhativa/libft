@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 15:29:04 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 15:43:58 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/14 15:51:15 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ char	**ft_split(char const *s, char c)
 			return (NULL);
 		}
 		s = skip_sep(s, c);
+		++i;
 	}
 	return (ret);
 }
