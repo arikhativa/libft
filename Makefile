@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/14 19:43:45 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/14 19:45:34 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC = \
 	ft_striteri.c \
 	ft_substr.c \
 	ft_putchar_fd.c \
+	ft_putendl_fd.c \
 	ft_putstr_fd.c \
 	ft_bzero.c
 
