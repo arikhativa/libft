@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:25:30 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 11:16:14 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/14 11:29:36 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+// malloc
+char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
