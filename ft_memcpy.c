@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 10:23:02 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 10:57:07 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/14 11:00:53 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (n)
 		ft_sizet_cpy(dest, src, n);
 	if (bytes)
-	{
 		ft_byte_cpy(((size_t *)dest) + n, ((size_t *)src) + n, bytes);
-	}
 	return (dest);
 }
