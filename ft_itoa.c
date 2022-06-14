@@ -6,13 +6,13 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:31:37 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 18:47:09 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/14 19:49:36 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-#define BASE 10
+#include "libft.h"
 
 static int	count_digit(long n)
 {
@@ -23,7 +23,7 @@ static int	count_digit(long n)
 		return (1);
 	while (n)
 	{
-		n /= BASE;
+		n /= BASE_DEC;
 		++i;
 	}
 	return (i);
@@ -31,12 +31,12 @@ static int	count_digit(long n)
 
 static void	rec(long n, char *buff)
 {
-	if (n / BASE)
+	if (n / BASE_DEC)
 	{
-		rec(n / BASE, buff - 1);
-		rec(n % BASE, buff);
+		rec(n / BASE_DEC, buff - 1);
+		rec(n % BASE_DEC, buff);
 	}
-	if (n < BASE)
+	if (n < BASE_DEC)
 		*buff = n + '0';
 }
 
