@@ -6,12 +6,13 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:25:52 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 11:44:10 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 11:52:28 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "libft.h"
 

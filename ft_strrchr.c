@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 17:37:56 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/13 17:45:01 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 11:39:13 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 
 	ret = (char *)s;
+	c = (int)((char)c);
 	i = (int)ft_strlen(s);
 	if (!c)
 		return (ret + i);
