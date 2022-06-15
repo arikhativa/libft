@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/15 11:11:00 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/15 15:32:52 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,10 +72,10 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ) Makefile libft.h
+$(NAME): $(OBJ) Makefile $(HED)
 	ar rcsv $(NAME) $(OBJ)
 
-bonus: $(BONUS_OBJ) $(OBJ) Makefile libft.h
+bonus: $(BONUS_OBJ) $(OBJ) Makefile $(HED)
 	ar rcsv $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:

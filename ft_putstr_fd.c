@@ -6,19 +6,20 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 19:43:22 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/15 13:49:52 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 15:15:03 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	size_t	l;
+
 	if (!s)
 		return ;
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		++s;
-	}
+	l = ft_strlen(s);
+	write(fd, s, l);
 }
