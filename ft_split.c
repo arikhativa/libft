@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 15:29:04 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 15:51:15 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:36:01 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static const char	*skip_sep(const char *s, char sep)
 {
-	while (*s == sep)
+	while (*s && *s == sep)
 		++s;
 	return (s);
 }
