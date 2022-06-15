@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/15 09:53:35 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/15 11:11:00 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,9 @@ BONUS_SRC = \
 	ft_lstsize.c \
 	ft_lstadd_back.c \
 	ft_lstlast.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstmap.c \
 	ft_lstiter.c
 
 OBJ = $(SRC:.c=.o)

@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 09:27:55 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/15 11:10:39 by yoav             ###   ########.fr       */
+/*   Created: 2022/06/15 11:03:57 by yoav              #+#    #+#             */
+/*   Updated: 2022/06/15 11:08:45 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	while (lst)
+	t_list	*tmp;
+	t_list	*node;
+
+	if (!lst | !del)
+		return ;
+	node = *lst;
+	while (node)
 	{
-		f(lst->content);
-		lst = lst->next;
+		tmp = node->next;
+		ft_lstdelone(node, del);
+		node = tmp;
 	}
+	*lst = NULL;
 }
