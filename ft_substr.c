@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:34:07 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/15 11:56:51 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 12:05:24 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,18 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ret;
+	char			*ret;
+	unsigned int	substr_len;
 
+	substr_len = ft_strlen((s + start));
+	if (start > substr_len)
+		return (ft_strdup(""));
+	if (substr_len < len)
+		len = substr_len;
 	ret = (char *)malloc(sizeof(char) * (len + 1));
 	if (ret)
 	{
-		ft_strlcpy(ret, (s + start), len);
+		ft_strlcpy(ret, (s + start), len + 1);
 	}
 	return (ret);
 }
