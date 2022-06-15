@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:48:13 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 14:39:34 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:57:00 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*ret;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = get_start(s1, set);
 	end = get_end(s1, set);
 	if (end < start)

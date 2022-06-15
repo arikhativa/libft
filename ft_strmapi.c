@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 18:47:40 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/14 19:02:02 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:55:37 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*ret;
 
+	if (!s || !f)
+		return (NULL);
 	i = ft_strlen(s);
 	ret = (char *)malloc(sizeof(char) * (i + 1));
 	if (ret)

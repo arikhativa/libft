@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 18:21:37 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/13 20:41:34 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:44:53 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_atoi(const char *nptr)
 	int		ret;
 	int		sign;
 
+	if (!nptr)
+		return (0);
 	s = (char *)nptr;
 	ret = 0;
 	s = skip_space(s);

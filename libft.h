@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:25:30 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/15 11:24:31 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:54:19 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define LIBFT_H
 
 # include <stddef.h>
-# define BASE_DEC 10
+
+# define BASE_DEC	10
 
 typedef struct s_list
 {

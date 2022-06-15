@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:34:07 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/15 13:09:56 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:57:17 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	substr_len;
 	size_t	str_len;
 
+	if (!s)
+		return (NULL);
 	str_len = ft_strlen(s);
 	if ((size_t)start > str_len)
 		return (ft_strdup(""));

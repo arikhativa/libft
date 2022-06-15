@@ -6,7 +6,7 @@
 /*   By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 15:29:04 by yoav              #+#    #+#             */
-/*   Updated: 2022/06/15 13:36:01 by yoav             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:51:05 by yoav             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char	**ft_split(char const *s, char c)
 	int				i;
 	char			**ret;
 
+	if (!s)
+		return (NULL);
 	word_num = count_word(s, c);
 	ret = (char **)malloc(sizeof(char *) * (word_num + 1));
 	if (!ret)
