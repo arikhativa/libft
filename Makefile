@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/14 19:47:12 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/15 09:46:54 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,15 @@ SRC = \
 	ft_putnbr_fd.c \
 	ft_bzero.c
 
+BONUS_SRC = \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstiter.c
+
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 HED = libft.h
 
 CC = gcc
@@ -62,7 +70,9 @@ all: $(NAME)
 
 $(NAME): $(OBJ) Makefile libft.h
 	ar rcsv $(NAME) $(OBJ)
-	ranlib $(NAME)
+
+bonus: $(BONUS_OBJ) $(OBJ) Makefile libft.h
+	ar rcsv $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
 	$(RM) $(OBJ)
