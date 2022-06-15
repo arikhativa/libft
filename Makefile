@@ -6,7 +6,7 @@
 #    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/15 09:46:54 by yoav             ###   ########.fr        #
+#    Updated: 2022/06/15 09:53:35 by yoav             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ BONUS_SRC = \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
+	ft_lstadd_back.c \
 	ft_lstlast.c \
 	ft_lstiter.c
 
@@ -63,7 +64,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -c
 RM = rm -f
 
-.PHONY: clean fclean re all
+.PHONY: clean fclean re all bonus
 .PRECIOUS: $(SRC) $(HED)
 
 all: $(NAME)
@@ -75,7 +76,7 @@ bonus: $(BONUS_OBJ) $(OBJ) Makefile libft.h
 	ar rcsv $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
