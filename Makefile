@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yoav <yoav@student.42.fr>                  +#+  +:+       +#+         #
+#    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/06/15 15:32:52 by yoav             ###   ########.fr        #
+#    Updated: 2022/07/16 15:41:04 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+NAME_BONUS = libft_bonus.a
 
 SRC = \
 	ft_isalpha.c \
@@ -48,40 +49,39 @@ SRC = \
 	ft_putnbr_fd.c \
 	ft_bzero.c
 
-BONUS_SRC = \
-	ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstsize.c \
-	ft_lstadd_back.c \
-	ft_lstlast.c \
-	ft_lstdelone.c \
-	ft_lstclear.c \
-	ft_lstmap.c \
-	ft_lstiter.c
+SRC_BONUS = \
+	ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstmap_bonus.c \
+	ft_lstiter_bonus.c
 
 OBJ = $(SRC:.c=.o)
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
-HED = libft.h
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -c
 RM = rm -f
 
-.PHONY: clean fclean re all bonus
-.PRECIOUS: $(SRC) $(HED)
-
 all: $(NAME)
 
-$(NAME): $(OBJ) Makefile $(HED)
-	ar rcsv $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	ar rcs $@ $^
 
-bonus: $(BONUS_OBJ) $(OBJ) Makefile $(HED)
-	ar rcsv $(NAME) $(OBJ) $(BONUS_OBJ)
+$(NAME_BONUS): $(OBJ_BONUS) $(OBJ)
+	ar rcs $@ $^
+	cp $(NAME_BONUS) $(NAME)
+
+bonus: $(NAME_BONUS)
 
 clean:
-	$(RM) $(OBJ) $(BONUS_OBJ)
+	$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(NAME_BONUS)
 
 re: fclean all
