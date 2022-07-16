@@ -6,7 +6,7 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/07/16 15:41:04 by yrabby           ###   ########.fr        #
+#    Updated: 2022/07/16 15:42:06 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
 all: $(NAME)
