@@ -6,12 +6,11 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 11:26:43 by yoav              #+#    #+#              #
-#    Updated: 2022/07/17 12:57:46 by yrabby           ###   ########.fr        #
+#    Updated: 2022/07/17 16:14:37 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-NAME_BONUS = libft_bonus.a
 
 SRC = \
 	ft_isalpha.c \
@@ -67,18 +66,13 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 ARFLAGS = rcs
 
-.PHONY: all clean fclean re bonus
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $@ $^
 
-$(NAME_BONUS): $(OBJ_BONUS) $(OBJ)
-	$(AR) $(ARFLAGS) $@ $^
-	cp $(NAME_BONUS) $(NAME)
-
-bonus: $(NAME_BONUS)
+bonus: $(OBJ) $(OBJ_BONUS)
+	$(AR) $(ARFLAGS) $(NAME) $^
 
 clean:
 	$(RM) $(OBJ) $(OBJ_BONUS)
@@ -87,3 +81,6 @@ fclean: clean
 	$(RM) $(NAME) $(NAME_BONUS)
 
 re: fclean all
+
+
+.PHONY: all clean fclean re bonus
